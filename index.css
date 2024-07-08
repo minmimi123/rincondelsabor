@@ -1,0 +1,271 @@
+/* Estilo global */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Imagen de fondo */
+body {
+    background-image: url('https://resizer.otstatic.com/v2/photos/wide-huge/1/25160762.jpg'); /* Cambia esta ruta a la de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     
+}
+
+
+
+/* Barra de navegación */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para la barra de navegación */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.testimonials {
+    background-color: rgb(70, 100, 100);
+    border-radius: 10px;
+    margin: 20px 0;
+    text-decoration: none;
+
+}
+.menu {
+    margin: 40px 0;
+}
+
+.menu h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.menu-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.menu-item {
+    min-width: 100px; /* Ancho mínimo para cada elemento del menú */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+}
+
+.menu-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.testimonials {
+    margin: 50px 0;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonials p {
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+
+
+/* Contenido principal */
+.content {
+    padding: 60px 20px; /* Padding para evitar que el contenido quede oculto bajo la barra de navegación */
+    text-align: center;
+    color: white;
+}
+
+.contact {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.contact form {
+    margin: 20px 0;
+}
+
+.contact label {
+    display: block;
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+
+.gallery img {
+    width: 200px; /* Ancho deseado para las imágenes */
+    height: 150px; /* Alto deseado para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor manteniendo la proporción */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    margin: 10px; /* Margen entre las imágenes (opcional) */
+    background-position: center;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    
+}
+
+.gallery img {
+    width: calc(33.333% - 10px);
+    transition: transform 0.3s ease;
+
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.navbar a[href="galeria.html"] {
+    color: #f6f9f9ea; /* Cambia el color del texto para este enlace */
+    font-weight: bold; /* Texto en negrita para destacar */}
+
+/* Estilos para el formulario */
+.formulario {
+    padding: 20px;
+    background-color: #b29393;
+}
+
+.formulario label, .formulario input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    padding: 10px 20px;
+    background-color: #928686;
+    color: #c6b2b2;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #aa7070;
+}
+
+.floater {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia del borde inferior */
+    right: 20px; /* Ajusta la distancia del borde derecho */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}

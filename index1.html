@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Fondo y Barra de Navegación</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilos en línea */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .menu-item {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .menu-item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover img {
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="./index4.html">Sedes</a></li>
+                <li><a href="./index3.html">Promociones</a></li>
+                <li><a href="./index1.html">La Carta</a></li>
+                <li><a href="./index2.html">Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>BIENVENIDOS AL RINCON DEL SABOR</h1>
+        <h2>Conoce nuestras delicias</h2>
+
+        <section id="about" class="about">
+            <h3>Acerca de Nosotros</h3>
+            <p>COME Y PUNTO.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Menú</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="https://elcomercio.pe/resizer/1vlDBQ8C_RvURmu-3-fkj30ohi4=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/JPV5G4H7KNHMREWOT66UXSTYB4.jpg" alt="Plato 1">
+                    <h3>Plato Especial 1</h3>
+                    <p>Descripción del plato especial 1.</p>
+                    <p>Precio: S/.35.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn0.recetasgratis.net/es/posts/7/4/1/ceviche_peruano_18147_600_square.jpg" alt="Plato 2">
+                    <h3>Plato Especial 2</h3>
+                    <p>Descripción del plato especial 2.</p>
+                    <p>Precio: S/.18.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.pinimg.com/736x/6e/5d/4d/6e5d4d30ca32b26113ca424b30816211.jpg" alt="Plato 3">
+                    <h3>Plato Especial 3</h3>
+                    <p>Descripción del plato especial 3.</p>
+                    <p>Precio: S/.20.00</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <h4>Nosotros</h4>
+                <p>Sumérgete en una experiencia gastronómica sin igual en RINCON DEL SABOR, donde cada plato es una obra maestra creada por nuestro aclamado chef BONIFACIO. Situado en SANTA ANITA/LIMA PERU, nuestro restaurante te invita a explorar sabores únicos que capturan la esencia de la cocina PERUANA.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>
+                    <strong>Teléfono:</strong> +51 123 456 789<br>
+                    <strong>Email:</strong> contacto@ejemplo.com<br>
+                    <strong>Dirección:</strong> Av. santa monica, Lima, Perú
+                </p>
+            </div>
+            <div>
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="text-white"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e41111;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://elcomercio.pe/resizer/ahrVoHtKx8pws4ZRM1nsvGCz_SE=/980x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/Y3FRXHVINZCBHIJQJHSAREVT4U.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0%;
+            padding: 0%;
+        }
+        .container {
+            background-color: #0b1521;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(14, 2, 2, 0.1);
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: #e7e0e0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #40603c;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .success {
+            color: #4CAF50;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reserva tu cita</h2>
+        <form id="reservaForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="fecha">Fecha de Reserva:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+
+            <label for="personas">Número de Personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required><br><br>
+
+            <button type="submit">Enviar Reserva</button>
+        </form>
+
+        <div id="mensajeReserva" style="display:none;"></div>
+    </div>
+
+    <script>
+        // JavaScript para manejar el envío del formulario
+        document.getElementById('reservaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío por defecto
+
+            // Obtener los datos del formulario
+            var formData = new FormData(this);
+            var nombre = formData.get('nombre');
+            var fecha = formData.get('fecha');
+            var personas = formData.get('personas');
+
+            if (nombre.trim() === '' || fecha === '' || personas === '') {
+                alert('Por favor completa todos los campos.');
+                return;
+            }
+
+            // Simulando el envío de datos (aquí podrías usar AJAX para una implementación real)
+            mostrarMensajeExito();
+        });
+
+        function mostrarMensajeExito() {
+            var mensajeDiv = document.getElementById('mensajeReserva');
+            mensajeDiv.innerHTML = '<p class="success">¡Reserva exitosa!</p>';
+            mensajeDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
